@@ -4,8 +4,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-import com.sun.corba.se.impl.orbutil.graph.Node;
-
 public class Iterator {
 	public static void main(String[] args) {
 		TreeNode tree = TreeNode.generateTree();
@@ -34,7 +32,6 @@ public class Iterator {
 		System.out.println("");
 		postOrderByStack(tree);
 		System.out.println("");
-		postOrderByStack2(tree);
 
 	}
 
@@ -145,6 +142,12 @@ public class Iterator {
 	 * 两个栈第二个栈存储最后的输出顺序
 	 * 第一个栈用来辅助向第二个栈中添加数据
 	 * 
+	 * Q:为什么先序和中序只用一个栈就行了，而后序需要两个栈
+	 * 
+	 * A:先序和中序的时候可以把左节点先出栈不影响最后的输出结果
+	 * 后序的时候如果先把右节点进栈 
+	 * 不出栈无法把左节点添加进栈
+	 * 出栈了最后输出结果不完全
 	 */
 	public static void postOrderByStack(TreeNode treeNode) {
 		if (treeNode == null) {
