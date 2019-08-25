@@ -13,11 +13,14 @@ public class EightQueens {
 			return; // 8 行棋子都放好了，已经没法再往下递归了，所以就 return
 		}
 		for (int column = 0; column < 8; ++column) { // 每一行都有 8 中放法
+			//如果这一行的方法满足要求
 			if (isOk(row, column)) { // 有些放法不满足要求
 				result[row] = column; // 第 row 行的棋子放到了 column 列
+				//进入下一行
 				cal8queens(row + 1); // 考察下一行
 			}
 		}
+		//如果这一行所有的都不满足，出栈回退到上一行
 	}
 
 	private boolean isOk(int row, int column) {// 判断 row 行 column 列放置是否合适

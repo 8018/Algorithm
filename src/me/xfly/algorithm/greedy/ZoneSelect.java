@@ -47,7 +47,7 @@ public class ZoneSelect {
 	}
 	
 	static Zone getCorrectZone(List<Zone> zones,int left,int right) {
-		
+		//找到落在当前区间范围内，但是右坐标最小的
 		Zone zone = null;
 		for (int i = 0; i < zones.size(); i++) {
 			if (zone == null) {
