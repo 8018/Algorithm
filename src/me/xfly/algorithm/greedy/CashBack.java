@@ -1,6 +1,7 @@
 package me.xfly.algorithm.greedy;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CashBack {
@@ -9,6 +10,8 @@ public class CashBack {
 		int cashBack = 99;
 		
 		List<Integer> backResults = new ArrayList<Integer>();
+		
+		Collections.sort(backResults);
 		
 		cashBack(backResults, moneys, cashBack);
 		
