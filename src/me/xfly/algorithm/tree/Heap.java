@@ -1,5 +1,9 @@
 package me.xfly.algorithm.tree;
 
+/**
+ * 建堆有两种方式，分别是 insert 和 buildHeap
+ * 具体原理看它们的注释
+ * */
 public class Heap {
 
 	public static void main(String[] args) {
@@ -20,6 +24,9 @@ public class Heap {
 		count = 0;
 	}
 
+	/**
+	 * 把数据插入到队尾，然后自下往上堆化
+	 * */
 	public void insert(int data) {
 		if (count >= n)
 			return; // 堆满了
@@ -43,13 +50,12 @@ public class Heap {
 		return max;
 	}
 
-	/*
-	 * private void heapify(int[] a, int n, int i) { // 自上往下堆化 while (true) { int
-	 * maxPos = i; if (i * 2 <= n && a[i] < a[i * 2]) maxPos = i * 2; if (i * 2 + 1
-	 * <= n && a[maxPos] < a[i * 2 + 1]) maxPos = i * 2 + 1; if (maxPos == i) break;
-	 * swap(a, i, maxPos); i = maxPos; } }
-	 */
-
+	/**
+	 * 数组原地建堆
+	 * 从 n/2 往前依次进行堆化
+	 * 为什么是 n/2 ?
+	 * 完全二叉树有 n/2 个叶子节点，从 n/2 往前就是所有带有子节点的树依次进行堆化
+	 * */
 	static Heap buildHeap(int[] a, int n, int count) {
 		Heap heap = new Heap(n);
 		for (int i = n / 2; i >= 1; --i) {
@@ -61,16 +67,25 @@ public class Heap {
 		return heap;
 	}
 
+	/**
+	 * 从上往下堆化
+	 * 父亲节点和两个孩子节点对比
+	 * 若有子节点比父节点值大，找到两个孩子中较大的和父节点交换
+	 * 直至完全堆化
+	 * */
 	static void heapify(int[] a, int n, int i) {
 		while (true) {
 			int maxPos = i;
-			if (i * 2 <= n && a[i] < a[i * 2])
-				maxPos = i * 2;
-			if (i * 2 + 1 <= n && a[maxPos] < a[i * 2 + 1])
-				maxPos = i * 2 + 1;
-			if (maxPos == i)
+			if (i *2 <= n && a[i] < a[2*i]){
+				maxPos = 2*i;
+			}
+			if (i*2+1 <= n && a[maxPos] <a[2*i+1]){
+				maxPos = 2*i+1;
+			}
+			if (maxPos == i) {
 				break;
-			swap(a, i, maxPos);
+			}
+			swap(a,i,maxPos);
 			i = maxPos;
 		}
 	}

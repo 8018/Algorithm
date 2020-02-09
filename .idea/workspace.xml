@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cbb833e-8f2c-44f0-85ac-6f777f6e1e67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/Heap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/Heap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/TreeNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +30,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -43,5 +44,11 @@
       <updated>1581214053547</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="462" y="163" key="SettingsEditor" timestamp="1581217018441">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="462" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581217018441" />
   </component>
 </project>
