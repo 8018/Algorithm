@@ -21,6 +21,13 @@ public class Test {
 		int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 		reverseMatrix(matrix);
 
+		for (int i = 0;i <matrix.length;i++) {
+			int[] ints1 = matrix[i];
+			for (int j = 0;j<ints1.length;j++){
+				System.out.println(ints1[j]);
+			}
+		}
+
 	}
 
 	static void reverseMatrix(int[][] matrix) {
