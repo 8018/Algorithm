@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cbb833e-8f2c-44f0-85ac-6f777f6e1e67" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/dynamicprogramming/BSTSequences.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/Heap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/Heap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/Iterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/Iterator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,13 +24,33 @@
   <component name="ProjectId" id="1XYDINrvIgURUTYGrvSe00fExw6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="BSTSequences" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.xfly.algorithm.dynamicprogramming.BSTSequences" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.xfly.algorithm.dynamicprogramming.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BSTSequences" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -46,9 +66,48 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="462" y="163" key="SettingsEditor" timestamp="1581217018441">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1595054318994">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="462" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581217018441" />
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1595054318994" />
+    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1595054318993">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1595054318993" />
+    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1595054318993">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1595054318993" />
+    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1595054318994">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1595054318994" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1595054318996">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1595054318996" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1595054318995">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1595054318995" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1595054318995">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1595054318995" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1595054318996">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1595054318996" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/me/xfly/algorithm/dynamicprogramming/BSTSequences.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
