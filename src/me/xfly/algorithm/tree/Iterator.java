@@ -6,7 +6,9 @@ import java.util.Stack;
 
 public class Iterator {
 	public static void main(String[] args) {
-		TreeNode tree = TreeNode.generateTree();
+		//TreeNode tree = TreeNode.generateTree();
+
+		TreeNode tree;
 
 		/**
 		 * 前、中、后 遍历的时候没个节点最多被访问两次 所以时间复杂度是 O（n）
@@ -28,10 +30,10 @@ public class Iterator {
 		 * System.out.println(""); preOrderByStack2(tree);
 		 */
 
-		postOrder(tree);
+		/*postOrder(tree);
 		System.out.println("");
 		postOrderByStack(tree);
-		System.out.println("");
+		System.out.println("");*/
 
 	}
 
@@ -40,8 +42,8 @@ public class Iterator {
 			return;
 		}
 		System.out.print(tree.value + " ");
-		preOrder(tree.leftNode);
-		preOrder(tree.rightNode);
+		preOrder(tree.left);
+		preOrder(tree.right);
 	}
 
 	/*
@@ -60,11 +62,11 @@ public class Iterator {
 			while (current != null) {
 				System.out.print(current.value + " ");
 				stack.push(current);
-				current = current.leftNode;
+				current = current.left;
 			}
 
 			TreeNode node = stack.pop();
-			current = node.rightNode;
+			current = node.right;
 		}
 	}
 
@@ -88,11 +90,11 @@ public class Iterator {
 
 			TreeNode current = stack.pop();
 			System.out.print(current.value + " ");
-			if (current.rightNode != null) {
-				stack.push(current.rightNode);
+			if (current.right != null) {
+				stack.push(current.right);
 			}
-			if (current.leftNode != null) {
-				stack.push(current.leftNode);
+			if (current.left != null) {
+				stack.push(current.left);
 			}
 		}
 	}
@@ -101,9 +103,9 @@ public class Iterator {
 		if (tree == null) {
 			return;
 		}
-		inOrder(tree.leftNode);
+		inOrder(tree.left);
 		System.out.print(tree.value + " ");
-		inOrder(tree.rightNode);
+		inOrder(tree.right);
 	}
 
 	/*
@@ -121,11 +123,11 @@ public class Iterator {
 		while (stack.size() != 0 || cur != null) {
 			while (cur != null) {
 				stack.push(cur);
-				cur = cur.leftNode;
+				cur = cur.left;
 			}
 			TreeNode node = stack.pop();
 			System.out.print(node.value + " ");
-			cur = node.rightNode;
+			cur = node.right;
 		}
 	}
 
@@ -133,8 +135,8 @@ public class Iterator {
 		if (tree == null) {
 			return;
 		}
-		postOrder(tree.leftNode);
-		postOrder(tree.rightNode);
+		postOrder(tree.left);
+		postOrder(tree.right);
 		System.out.print(tree.value + " ");
 	}
 
@@ -162,11 +164,11 @@ public class Iterator {
 
 		while (stack1.size() != 0) {
 			current = stack1.pop();
-			if (current.leftNode != null) {
-				stack1.push(current.leftNode);
+			if (current.left != null) {
+				stack1.push(current.left);
 			}
-			if (current.rightNode != null) {
-				stack1.push(current.rightNode);
+			if (current.right != null) {
+				stack1.push(current.right);
 			}
 			stack2.push(current);
 		}
@@ -201,14 +203,14 @@ public class Iterator {
 			TreeNode node = queue.poll();
 			System.out.print(node.value);
 
-			if (node.leftNode != null) {
-				queue.offer(node.leftNode);
-				nextLast = node.leftNode;
+			if (node.left != null) {
+				queue.offer(node.left);
+				nextLast = node.left;
 			}
 
-			if (node.rightNode != null) {
-				queue.offer(node.rightNode);
-				nextLast = node.rightNode;
+			if (node.right != null) {
+				queue.offer(node.right);
+				nextLast = node.right;
 			}
 
 			if (node == currentLast) {
