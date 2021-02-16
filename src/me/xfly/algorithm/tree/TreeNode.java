@@ -1,278 +1,302 @@
 package me.xfly.algorithm.tree;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
+import javafx.scene.transform.Rotate;
+
+import java.util.*;
 
 public class TreeNode {
-	public int value;
-	public TreeNode left;
-	public TreeNode right;
-	
-	public TreeNode(int value) {
-		this.value = value;
-	}
+    public int value;
+    public TreeNode left;
+    public TreeNode right;
 
-	public static TreeNode array2TreeNode(int[] nums) {
-		List<TreeNode> list = new ArrayList();
-		int length = nums.length;
-		for (int i = 1; i <= length; i++) {
-			if (nums[i - 1] > 0) {
-				list.add(new TreeNode(nums[i - 1]));
-			} else {
-				list.add(null);
-			}
-		}
-		for (int i = 1; i <= list.size() / 2 - 1 && list != null; i++) {
-			TreeNode node = list.get(i - 1);
-			if (node != null) {
-				node.left = list.get(i * 2 - 1);
-				node.right = list.get(i * 2);
-			}
-		}
-		int lastIndex = list.size() / 2;
+    public TreeNode(){
+    }
 
-		TreeNode last = list.get(lastIndex - 1);
+    public TreeNode(int value) {
+        this.value = value;
+    }
 
-		if (last != null) {
-			last.left = list.get(lastIndex * 2 - 1);
-			if (list.size() % 2 == 1) {
-				last.right = list.get(lastIndex * 2);
-			}
-		}
+    public static TreeNode array2TreeNode(int[] nums) {
+        List<TreeNode> list = new ArrayList();
+        int length = nums.length;
+        for (int i = 1; i <= length; i++) {
+            if (nums[i - 1] > 0) {
+                list.add(new TreeNode(nums[i - 1]));
+            } else {
+                list.add(null);
+            }
+        }
+        for (int i = 1; i <= list.size() / 2 - 1 && list != null; i++) {
+            TreeNode node = list.get(i - 1);
+            if (node != null) {
+                node.left = list.get(i * 2 - 1);
+                node.right = list.get(i * 2);
+            }
+        }
+        int lastIndex = list.size() / 2;
 
+        TreeNode last = list.get(lastIndex - 1);
 
-		return list.get(0);
-	}
-
-	/**
-	 * 迭代的方式实现中序遍历
-	 * 1、先把所有左子节点加入栈中
-	 * 2、出栈，打印当前值，当前节点的右节点执行步骤 1
-	 */
-	public static List<Integer> inorderTraversalWithStack(TreeNode root) {
-
-		Stack<TreeNode> stack = new Stack<TreeNode>();
-
-		List<Integer> result = new ArrayList<Integer>();
-
-		addNodeToStack(stack, root);
-
-		while (!stack.isEmpty()) {
-			TreeNode node = stack.pop();
-
-			result.add(node.value);
-
-			System.out.println(node.value);
-
-			if (node.right != null) {
-				addNodeToStack(stack, node.right);
-			}
-		}
-
-		return result;
-	}
+        if (last != null) {
+            last.left = list.get(lastIndex * 2 - 1);
+            if (list.size() % 2 == 1) {
+                last.right = list.get(lastIndex * 2);
+            }
+        }
 
 
-	public static void addNodeToStack(Stack<TreeNode> stack, TreeNode node) {
-		while (node != null) {
-			stack.push(node);
-			node = node.left;
-		}
-	}
+        return list.get(0);
+    }
 
-	public static List<Integer> inorderTraversal2(TreeNode root) {
+    /**
+     * 递归先序遍历
+     */
+    public static List<Integer> preOrder(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
+        if (root == null) {
+            return result;
+        }
 
-		List<Integer> result = new ArrayList<Integer>();
+        result.add(root.value);
+        result.addAll(preOrder(root.left));
+        result.addAll(preOrder(root.right));
+        return result;
+    }
 
-		if (root == null) {
-			return result;
-		}
+    /**
+     * 迭代先序遍历，使用栈做辅助
+     */
+    public static List<Integer> preOrderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
+        if (root == null) {
+            return result;
+        }
 
-		result.addAll(inorderTraversal2(root.left));
-		result.add(root.value);
-		result.addAll(inorderTraversal2(root.right));
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode current = root;
 
-		return result;
-	}
+        while (current != null || !stack.isEmpty()) {
+            if (current != null) {
+                stack.push(current);
+                result.add(current.value);
+                current = current.left;
+            } else {
+                current = stack.pop();
+                current = current.right;
+            }
+        }
 
-	public static List<List<Integer>> levelOrder(TreeNode root) {
-		List<List<Integer>> result = new ArrayList<>();
+        return result;
+    }
 
-		TreeNode currentLast = root;
-		TreeNode nextLast = root;
+    /**
+     * 递归中序遍历
+     */
+    public static List<Integer> inOrder(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
+        if (root == null) {
+            return result;
+        }
 
-		List<TreeNode> nodes = new ArrayList<>();
+        result.addAll(inOrder(root.left));
+        result.add(root.value);
+        result.addAll(inOrder(root.right));
 
-		List<Integer> level = new ArrayList<>();
+        return result;
+    }
 
-		while (root!=null){
-			level.add(root.value);
-			if (root.left!=null){
-				nextLast = root.left;
-				nodes.add(root.left);
-			}
-			if (root.right!=null){
-				nextLast = root.right;
-				nodes.add(root.right);
-			}
+    /**
+     * 迭代方式实现中序遍历
+     * 使用栈作为辅助工具
+     * 1、先把当前节点以及当前节点的左子节点依次放入栈中
+     * 2、取出栈顶节点，打印它的值，对当前节点的右子节点执行步骤1
+     */
+    public static List<Integer> inOrderTraversalWithStack(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        List<Integer> result = new ArrayList<Integer>();
+        addNodeToStack(stack, root);
 
-			if (root == currentLast){
-				currentLast = nextLast;
-				result.add(level);
-				level = new ArrayList<>();
-			}
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            result.add(node.value);
+            if (node.right != null) {
+                addNodeToStack(stack, node.right);
+            }
+        }
 
-			if (!nodes.isEmpty()){
-				root = nodes.get(0);
-				nodes.remove(0);
-			}else{
-				root = null;
-			}
-
-		}
-
-		return result;
-	}
-
-	public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-		List<List<Integer>> result = new ArrayList<>();
-
-		TreeNode currentLast = root;
-		TreeNode nextLast = root;
-
-		List<TreeNode> nodes = new ArrayList<>();
-
-		List<Integer> level = new ArrayList<>();
-
-		int height = 0;
-
-		while (root != null) {
-			level.add(root.value);
-			if (height % 2 == 0) {
-				level.add(root.value);
-			} else {
-				level.add(0, root.value);
-			}
-			System.out.print(root.value);
-			if (root.left != null) {
-				nextLast = root.left;
-				nodes.add(root.left);
-			}
-			if (root.right != null) {
-				nextLast = root.right;
-				nodes.add(root.right);
-			}
-
-			if (root == currentLast) {
-				currentLast = nextLast;
-				result.add(level);
-				height += 1;
-				level = new ArrayList<>();
-				System.out.println();
-			}
-
-			if (!nodes.isEmpty()) {
-				root = nodes.get(0);
-				nodes.remove(0);
-			} else {
-				root = null;
-			}
-
-		}
+        return result;
+    }
 
 
-		return result;
-	}
+    public static void addNodeToStack(Stack<TreeNode> stack, TreeNode node) {
+        while (node != null) {
+            stack.push(node);
+            node = node.left;
+        }
+    }
 
-	public static int maxDepth(TreeNode root) {
-		if (root == null){
-			return 0;
-		}
+    /**
+     * 递归后序遍历
+     */
+    public static List<Integer> postOrder(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
+        if (root == null) {
+            return result;
+        }
 
-		int left = maxDepth(root.left);
-		int right = maxDepth(root.right);
-		return Math.max(left,right)+1;
-	}
+        result.addAll(postOrder(root.left));
+        result.addAll(postOrder(root.right));
+        result.add(root.value);
+        return result;
+    }
 
-	public static boolean isBalanced(TreeNode root) {
-		return depth(root) != -1;
-	}
+    /**
+     *  迭代实现后序遍历
+     *  使用栈做辅助
+     *
+     */
+    public static List<Integer> postOrderTraversal(TreeNode root){
+        LinkedList<Integer> result = new LinkedList<>();
+        LinkedList<TreeNode> nodes = new LinkedList<>();
+        if (root == null){
+            return result;
+        }
 
-	private static int depth(TreeNode root) {
-		if (root == null) return 0;
-		int left = depth(root.left);
-		if(left == -1) return -1;
-		int right = depth(root.right);
-		if(right == -1) return -1;
-		return Math.abs(left - right) < 2 ? Math.max(left, right) + 1 : -1;
-	}
+        nodes.add(root);
+        while (!nodes.isEmpty()){
+            TreeNode node = nodes.pollLast();
+            result.addFirst(node.value);
 
-	public static int minDepth(TreeNode root) {
-		if (root == null){
-			return 0;
-		}
+            if (node.left!=null){
+                nodes.push(node.left);
+            }
+            if (node.right!= null){
+                nodes.push(node.right);
+            }
+        }
+        return result;
+    }
 
-		int left = minDepth(root.left);
-		int right = minDepth(root.right);
-		if (left==0){
-			return right+1;
-		}
-		if (right==0){
-			return left+1;
-		}
-		return Math.min(left,right)+1;
-	}
+    /**
+     * 层序遍历
+     * 记录当前层以及下一层的最后一个节点，当前节点与当前层最后一个节点相同时换层
+     */
+    public static List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        TreeNode currentLast = root;
+        TreeNode nextLast = root;
+        TreeNode node = root;
+        Queue<TreeNode> nodes = new LinkedList<>();
+        List<Integer> levelResult = new ArrayList<>();
+        while (node != null) {
+            levelResult.add(node.value);
+            if (node.left != null) {
+                nextLast = node.left;
+                nodes.add(node.left);
+            }
+            if (node.right != null) {
+                nextLast = node.right;
+                nodes.add(node.right);
+            }
 
-	public static List<Integer> preorderTraversal(TreeNode root) {
-		List<Integer> result = new ArrayList<Integer>();
+            if (node == currentLast) {
+                result.add(levelResult);
+                levelResult = new ArrayList<>();
+                currentLast = nextLast;
+            }
+            node = nodes.poll();
+        }
 
-		if (root == null) {
-			return result;
-		}
+        return result;
+    }
 
-		Stack<TreeNode> stack = new Stack<TreeNode>();
+    public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
 
-		TreeNode current = root;
+        TreeNode currentLast = root;
+        TreeNode nextLast = root;
 
-		while (current != null || !stack.isEmpty()) {
-			if (current != null) {
-				System.out.println(current.value);
-				result.add(current.value);
-				stack.push(current);
+        List<TreeNode> nodes = new ArrayList<>();
 
-				current = current.left;
-			} else {
-				current = stack.pop();
-				current = current.right;
-			}
-		}
+        List<Integer> level = new ArrayList<>();
 
-		return result;
-	}
+        int height = 0;
 
-	public static List<Integer> postorderTraversal(TreeNode root) {
-		LinkedList<TreeNode> stack = new LinkedList<>();
-		LinkedList<Integer> output = new LinkedList<>();
-		if (root == null) {
-			return output;
-		}
+        while (root != null) {
+            level.add(root.value);
+            if (height % 2 == 0) {
+                level.add(root.value);
+            } else {
+                level.add(0, root.value);
+            }
+            System.out.print(root.value);
+            if (root.left != null) {
+                nextLast = root.left;
+                nodes.add(root.left);
+            }
+            if (root.right != null) {
+                nextLast = root.right;
+                nodes.add(root.right);
+            }
 
-		stack.add(root);
-		while (!stack.isEmpty()) {
-			TreeNode node = stack.pollLast();
-			output.addFirst(node.value);
-			System.out.println(node.value);
-			if (node.left != null) {
-				stack.add(node.left);
-			}
-			if (node.right != null) {
-				stack.add(node.right);
-			}
-		}
-		return output;
-	}
+            if (root == currentLast) {
+                currentLast = nextLast;
+                result.add(level);
+                height += 1;
+                level = new ArrayList<>();
+                System.out.println();
+            }
 
+            if (!nodes.isEmpty()) {
+                root = nodes.get(0);
+                nodes.remove(0);
+            } else {
+                root = null;
+            }
+
+        }
+
+
+        return result;
+    }
+
+    public static int maxDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+        return Math.max(left, right) + 1;
+    }
+
+    public static boolean isBalanced(TreeNode root) {
+        return depth(root) != -1;
+    }
+
+    private static int depth(TreeNode root) {
+        if (root == null) return 0;
+        int left = depth(root.left);
+        if (left == -1) return -1;
+        int right = depth(root.right);
+        if (right == -1) return -1;
+        return Math.abs(left - right) < 2 ? Math.max(left, right) + 1 : -1;
+    }
+
+    public static int minDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int left = minDepth(root.left);
+        int right = minDepth(root.right);
+        if (left == 0) {
+            return right + 1;
+        }
+        if (right == 0) {
+            return left + 1;
+        }
+        return Math.min(left, right) + 1;
+    }
 
 }

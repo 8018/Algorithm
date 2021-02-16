@@ -1,9 +1,10 @@
 package me.xfly.algorithm.dynamicprogramming;
 
+import javafx.util.Pair;
+import org.junit.Assert;
+import org.junit.Test;
+
 public class FourKeyBoard {
-    public static void main(String[] args) {
-        System.out.println(maxA(8));
-    }
 
     public static int maxA(int N) {
         int[] dp = new int[N + 1];
@@ -20,4 +21,20 @@ public class FourKeyBoard {
         // N 次按键之后最多有几个 A？
         return dp[N];
     }
+
+    @Test
+    public void testZero(){
+        Assert.assertEquals(maxA(0),0);
+    }
+
+    @Test
+    public void testLessThanThree(){
+        Assert.assertEquals(maxA(2),2);
+    }
+
+    @Test
+    public void testLargeThanThree(){
+        Assert.assertEquals(maxA(8),12);
+    }
+
 }

@@ -46,10 +46,6 @@ public class Bag {
 			addProdect(bagCapacity, prodects, bag, alreadyAdded, index + 1);
 
 		}
-
-		/*
-		 * if (alreadyAdded + prodects[index] > bagCapacity) { bag.clear(); }
-		 */
 	}
 
 }
