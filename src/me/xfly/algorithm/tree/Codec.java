@@ -1,8 +1,5 @@
 package me.xfly.algorithm.tree;
 
-import me.xfly.algorithm.listnode.ListNode;
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -48,7 +45,6 @@ public class Codec {
         return root;
     }
 
-    @Test
     public void test(){
         TreeNode node = new TreeNode(1);
         node.left = new TreeNode(2);

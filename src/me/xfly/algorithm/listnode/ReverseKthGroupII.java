@@ -1,8 +1,6 @@
 package me.xfly.algorithm.listnode;
 
 
-import org.junit.Test;
-
 import java.util.*;
 
 public class ReverseKthGroupII {
@@ -101,7 +99,6 @@ public class ReverseKthGroupII {
         return new String(chars);
     }
 
-    @Test
     public void test(){
         String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
         groupAnagrams(strs);

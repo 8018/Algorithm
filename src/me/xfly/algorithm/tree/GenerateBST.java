@@ -1,13 +1,10 @@
 package me.xfly.algorithm.tree;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class GenerateBST {
 
-    @Test
     public void test(){
         generateTrees(3);
     }

@@ -1,13 +1,10 @@
 package me.xfly.algorithm;
 
-import org.junit.Test;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class LargestRectangleArea {
 
-    @Test
     public void test() {
         int[] heights = {2, 1, 5, 5, 5, 6, 3};
         largestRectangleArea(heights);

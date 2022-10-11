@@ -1,6 +1,5 @@
 package me.xfly.algorithm.dynamicprogramming;
 
-import javafx.util.Pair;
 import org.junit.Assert;
 import org.junit.Test;
 

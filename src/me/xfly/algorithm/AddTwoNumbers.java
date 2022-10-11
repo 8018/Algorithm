@@ -1,7 +1,6 @@
 package me.xfly.algorithm;
 
 import me.xfly.algorithm.listnode.ListNode;
-import org.junit.Test;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -38,7 +37,6 @@ public class AddTwoNumbers {
         return ans;
     }
 
-    @Test
     public void test(){
         addTwoNumbers(ListNode.getListNode(),ListNode.getListNode());
     }

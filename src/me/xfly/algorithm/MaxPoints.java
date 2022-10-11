@@ -1,6 +1,5 @@
 package me.xfly.algorithm;
 
-import javafx.util.Pair;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -8,7 +7,7 @@ import java.util.HashMap;
 public class MaxPoints {
 
 
-    int[][] points;
+    /*int[][] points;
     HashMap<Double, Integer> lines = new HashMap<Double, Integer>();
     int horisontal_lines;
 
@@ -70,5 +69,5 @@ public class MaxPoints {
     public void test() {
         int[][] points = {{0,0},{94911150,94911151},{94911151,94911152}};
         maxPoints(points);
-    }
+    }*/
 }

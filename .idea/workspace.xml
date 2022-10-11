@@ -2,64 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cbb833e-8f2c-44f0-85ac-6f777f6e1e67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/AddTwoNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/FindKthLargest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/FindMedium.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/GetSkyLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/JosephusProblem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/LRUCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/LargestRectangleArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/MaxPoints.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/MergeIntervals.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/MinMeetingRooms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/NumberToWords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/StringMultiby.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/StringToInt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/binarysearch/BinarySearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/dynamicprogramming/DropEgg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/dynamicprogramming/SuperEggDrop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/dynamicprogramming/WordBreak.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/findchar/KMP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/flashback/LeetCode_10.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/flashback/LetterCombination.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/flashback/SearchWords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/CloneRandomList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/CopyRandomList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/DeleteDuplicates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/FindFirstCommonNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/FindLastKListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/ListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/ListNodeToBST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/MergeList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/PalindromeListCheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/PrintListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/RandomListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/ReverseKthGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/ReverseListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/RotateRight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/SwapPairs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/TreeNodeConvertToListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/sort/Heap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/sort/HeapII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/sort/QuickSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/string/ReverseWords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/Codec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/GenerateBST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/HasSubTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/ISValidBST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/LowestCommonAncestor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/ReConstructBinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/window/LeetCode_76.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/flashback/LeetCode_39.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_10.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/AddTwoNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/AddTwoNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/JosephusProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/JosephusProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/LargestRectangleArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/LargestRectangleArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/MaxPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/MaxPoints.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/dynamicprogramming/FourKeyBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/dynamicprogramming/FourKeyBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/flashback/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/flashback/Bag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/flashback/WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/flashback/WordSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/mergesort2/MergeSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/DeleteDuplicates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/DeleteDuplicates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/ReverseKthGroupII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/listnode/ReverseKthGroupII.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/sort/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/sort/MergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/sort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/sort/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/Codec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/Codec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/GenerateBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/GenerateBST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/xfly/algorithm/tree/TreeNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +58,32 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.QuickSort">
+    <configuration name="LeetCode_39" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.xfly.algorithm.flashback.LeetCode_39" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.xfly.algorithm.flashback.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.xfly.algorithm.sort.MergeSort" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.xfly.algorithm.sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.xfly.algorithm.sort.QuickSort" />
       <module name="Algorithm" />
@@ -128,22 +113,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetSkyLine.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="me.xfly.algorithm.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="me.xfly.algorithm" />
-      <option name="MAIN_CLASS_NAME" value="me.xfly.algorithm.GetSkyLine" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LargestRectangleArea.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Algorithm" />
       <extension name="coverage">
@@ -160,29 +129,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringMultiby.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="me.xfly.algorithm.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="me.xfly.algorithm" />
-      <option name="MAIN_CLASS_NAME" value="me.xfly.algorithm.StringMultiby" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.QuickSort" />
+        <item itemvalue="Application.MergeSort" />
+        <item itemvalue="Application.LeetCode_39" />
         <item itemvalue="JUnit.GenerateBST.test" />
         <item itemvalue="JUnit.LargestRectangleArea.test" />
-        <item itemvalue="JUnit.GetSkyLine.test" />
-        <item itemvalue="JUnit.StringMultiby.test" />
       </list>
     </recent_temporary>
   </component>
@@ -199,6 +152,18 @@
       <updated>1581214053547</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -279,11 +244,6 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/me/xfly/algorithm/flashback/EightQueens.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/me/xfly/algorithm/flashback/WordSearch.java</url>
           <line>16</line>
           <option name="timeStamp" value="24" />
@@ -310,7 +270,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/me/xfly/algorithm/MaxPoints.java</url>
-          <line>36</line>
+          <line>35</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -320,7 +280,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/me/xfly/algorithm/tree/Codec.java</url>
-          <line>60</line>
+          <line>56</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -340,7 +300,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/me/xfly/algorithm/listnode/ReverseKthGroupII.java</url>
-          <line>9</line>
+          <line>7</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -350,12 +310,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/me/xfly/algorithm/listnode/ReverseKthGroupII.java</url>
-          <line>85</line>
+          <line>83</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/me/xfly/algorithm/AddTwoNumbers.java</url>
-          <line>10</line>
+          <line>9</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -380,13 +340,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/me/xfly/algorithm/tree/GenerateBST.java</url>
-          <line>22</line>
+          <line>19</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/me/xfly/algorithm/sort/QuickSort.java</url>
           <line>26</line>
           <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/me/xfly/algorithm/flashback/LeetCode_39.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/me/xfly/algorithm/JosephusProblem.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
